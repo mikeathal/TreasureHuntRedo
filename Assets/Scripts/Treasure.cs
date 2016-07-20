@@ -4,34 +4,57 @@ using UnityEngine.UI ;
 
 public class Treasure : MonoBehaviour {
 	bool didPlayerWin = false ;
+
+	public Transform PlayerPos;
+
 	public Text WinText;
 	public Transform WinPos;
-	public Text MistyText ;
-	public Text SleepyText ;
-	public Text WideEyesText ;
-	public Text RainbowsText ;
+
+
+	public Text MistyText;
+	public SpriteRenderer Misty;
+	public Transform MistyPos;
+
+	public Text SleepyText;
+	public SpriteRenderer Sleepy;
+	public Transform SleepyPos;
+
+	public Text WideEyesText;
+	public SpriteRenderer WideEyes;
+	public Transform WideEyesPos;
+
+	public Text RainbowsText;
+	public SpriteRenderer Rainbows;
+	public Transform RainbowsPos;
+
 	// Use this for initialization
 
 	// Update is called once per frame
 	void Update () {
 
-		if ((WinPos.position - transform.position).magnitude < 2f) {
+		if (WinPos != null) {
+			if ((WinPos.position - transform.position).magnitude < 2f) {
 			
-			if (Input.GetKeyDown (KeyCode.Space)) {
-				didPlayerWin = true;
+				if (Input.GetKeyDown (KeyCode.Space)) {
+					didPlayerWin = true;
+				}
 			}
-
-
 		}
+
+
 		if (didPlayerWin) {
 			WinText.text = "Nice! You made it to Jenna's party!";
 
 		}
-		if (WinPos.position.y < -36.2721f) {
+		if ( ((MistyPos.position-PlayerPos.position).magnitude < 1f) && (Input.GetKeyDown(KeyCode.Space)) ) {
+			Debug.Log("Misty Ran");
+			Misty.enabled = true;
 			MistyText.text = "Yooooo what's uuuuuup dude! \nOh maaan Jenna's party? Umm... We know it's not like, in any of the 4 2 rOoms... we're having a LAN party with the dudes in those rooms hahaha \nBest of luck yo!";
 
 		}
-		if (WinPos.position.x < -34f) {
+		if ( ((SleepyPos.position-PlayerPos.position).magnitude < 1f) && (Input.GetKeyDown(KeyCode.Space)) ) {
+			Debug.Log("Sleepy Ran");
+			Sleepy.enabled = true;
 			SleepyText.text = "Mmmmmggghhhhhhhh... huh? \n'Z puhrty mgggghhhhh 'z east mmmmgggghhhh.";
 
 		}
