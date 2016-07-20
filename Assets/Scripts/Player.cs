@@ -3,9 +3,13 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
+	public AudioSource Knocking;
+
+
 	// Use this for initialization
 	void Start () {
-	
+		var audioClip = Resources.Load<AudioClip>("Knocking.wav");
+		Knocking.clip = audioClip;
 	}
 	
 	// Update is called once per frame
@@ -38,7 +42,10 @@ public class Player : MonoBehaviour {
 			GetComponent<Rigidbody2D> ().velocity += new Vector2 (300f, 0f) * Time.deltaTime;
 
 		}
-
+			
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Knocking.Play();
+		}
 
 	}
 }

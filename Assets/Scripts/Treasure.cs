@@ -14,6 +14,7 @@ public class Treasure : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
 		if ((WinPos.position - transform.position).magnitude < 2f) {
 			
 			if (Input.GetKeyDown (KeyCode.Space)) {
