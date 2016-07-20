@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
+	public AudioSource PlayerKnocking;
+
+	float LastTimeKnocked = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -40,8 +43,9 @@ public class Player : MonoBehaviour {
 
 		}
 			
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			GetComponent<AudioSource>().Play();
+		if (Input.GetKeyDown (KeyCode.Space) && Time.time - LastTimeKnocked > 1f) {
+			PlayerKnocking.PlayOneShot (PlayerKnocking.clip);
+			LastTimeKnocked = Time.time;
 		}
 
 	}

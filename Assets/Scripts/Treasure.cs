@@ -28,7 +28,7 @@ public class Treasure : MonoBehaviour {
 
 		}
 		if (WinPos.position.y < -36.2721f) {
-			MistyText.text = "Yooooo what's uuuuuup dude! \nOh maaan Jenna's party? Umm... \nWe know it's not like, in any of the \n4 2 rOoms... we're having a LAN party with the dudes in those rooms hahaha \nBest of luck yo!";
+			MistyText.text = "Yooooo what's uuuuuup dude! \nOh maaan Jenna's party? Umm... We know it's not like, in any of the 4 2 rOoms... we're having a LAN party with the dudes in those rooms hahaha \nBest of luck yo!";
 
 		}
 		if (WinPos.position.x < -34f) {
@@ -40,7 +40,7 @@ public class Treasure : MonoBehaviour {
 
 		}
 		if (WinPos.position.x > 36.647f) {
-			RainbowsText.text = "Shhh, quiet down--can you see the walls breathing? \nReality itself is so...colorful...I'm so feeling at one with the carpet right now. \nOh a party? All I can think about the room was the curls in the room number.";
+			RainbowsText.text = "Shhh, quiet down--can you see the walls breathing? \nReality itself is so... colorful... I'm so feeling at one with the carpet right now. \nOh a party? All I can think about the room was the curls in the room number.";
 
 		}
 
