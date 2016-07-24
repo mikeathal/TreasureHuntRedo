@@ -4,8 +4,12 @@ using UnityEngine.UI ;
 
 public class Treasure : MonoBehaviour {
 	bool didPlayerWin = false ;
+	bool PlayerSpeedUp = false;
+	bool PlayerReverse = false;
+	bool PlayerInvertSprite = false;
 
 	public Transform PlayerPos;
+	public SpriteRenderer PlayerColorInvert;
 
 	public Text WinText;
 	public Transform WinPos;
@@ -58,7 +62,7 @@ public class Treasure : MonoBehaviour {
 		if ( ((WideEyesPos.position-PlayerPos.position).magnitude < 2.5f) && (Input.GetKeyDown(KeyCode.Space)) ) {
 			Debug.Log ("WideEyes Ran");
 			WideEyes.enabled = true;
-			WideEyesText.text = "OMG HOW ARE YOU?!!?! IT'S BEEEEEEEN SO LONG SINCE I'VE SEEEEEEEN YOU!! \nCOME GIMME A HUG!! WHAT?! PARTY?! \nALL I REMEMBER IS IT'S IN AND EEEEEEEeeeeeEEEEEEEVEN DORM!!";
+			WideEyesText.text = "OMG HOW ARE YOU?!?! IT'S BEEEN SO LONG SINCE I'VE SEEEEEN YOU!! \nCOME GIMME A HUG!! WHAT?! JENNA'S PARTY?! \nIT'S IN AND EEEEEEEeeeeeEEEEEEEVEN DORM!! Sleepy Brett might know something in West Hall\nTAKE THIS TO GET THERE FAAASTER!!";
 
 		}
 		if ( ((RainbowsPos.position-PlayerPos.position).magnitude < 2.5f) && (Input.GetKeyDown(KeyCode.Space)) ) {
