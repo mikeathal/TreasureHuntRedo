@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI ;
 
 public class Treasure : MonoBehaviour {
-	bool didPlayerWin;
+	// bool didPlayerWin;
 	bool WinDoorUnlocked;
 
 	public Transform PlayerPos;
@@ -48,7 +48,7 @@ public class Treasure : MonoBehaviour {
 		SleepyVisited = false;
 		WideEyesVisited = false;
 		RainbowsVisited = false;
-		didPlayerWin = false;
+		// didPlayerWin = false;
 
 	}
 
@@ -71,7 +71,7 @@ public class Treasure : MonoBehaviour {
 			WinSprite.enabled = true;
 			WinText.enabled = true;
 			WinText.text = "Nice! You made it to Jenna's party!";
-			didPlayerWin = true;
+			// didPlayerWin = true;
 
 		}
 
