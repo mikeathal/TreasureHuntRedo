@@ -19,27 +19,27 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.W)) {
 
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, 300f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, 1000f) * Time.deltaTime;
 
 		}
 
 
 		if (Input.GetKey (KeyCode.S)) {
 
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, -300f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, -1000f) * Time.deltaTime;
 
 		}
 
 
 		if (Input.GetKey (KeyCode.A)) {
 
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (-300f, 0f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (-1000f, 0f) * Time.deltaTime;
 
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
 
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (300f, 0f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (1000f, 0f) * Time.deltaTime;
 
 		}
 			
