@@ -96,7 +96,7 @@ public class Treasure : MonoBehaviour {
 		if ( ((WideEyesPos.position-PlayerPos.position).magnitude < 2.5f) && (Input.GetKeyDown(KeyCode.Space)) ) {
 			Debug.Log ("WideEyes Ran");
 			WideEyes.enabled = true;
-			WideEyesText.text = "OMG HOW ARE YOU?!?! IT'S BEEEN SO LONG SINCE I'VE SEEEEEN YOU!! \nCOME GIMME A HUG!! WHAT?! JENNA'S PARTY?! \nIT'S IN AND EEEEEEEeeeeeEEEEEEEVEN DORM!!\n\nSleepy Brett in West Hall might know something. TAKE THIS TO GET THERE FAAASTER!!";
+			WideEyesText.text = "OMG HOW ARE YOU?!?! IT'S BEEEN SO LONG SINCE I'VE SEEEEEN YOU!!  COME GIMME A HUG!! WHAT?! JENNA'S PARTY?! \nIT'S IN AND EEEEEEEeeeeeEEEEEEEVEN DORM!!\n\nSleepy Brett in West Hall might know something. TAKE THIS TO GET THERE FAAASTER!!";
 			WideEyesVisited = true;
 
 			// Give player speed boost
